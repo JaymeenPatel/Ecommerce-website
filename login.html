@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .login-container {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      width: 450px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #2e7d32;
+      margin-bottom: 25px;
+      font-size: 28px;
+    }
+
+    .input-group {
+      margin: 20px 0;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 15px 18px;
+      border: 1px solid #a5d6a7;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: border-color 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+      border-color: #66bb6a;
+      outline: none;
+    }
+
+    button {
+      background: #66bb6a;
+      color: white;
+      padding: 15px 25px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 18px;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background: #388e3c;
+    }
+
+    .forgot-password {
+      display: block;
+      margin: 20px 0;
+      color: #388e3c;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .forgot-password:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Welcome Back!</h2>
+    <form action="/login" method="POST">
+      <div class="input-group">
+        <input type="text" name="username" placeholder="Enter your Email" required>
+      </div>
+      <div class="input-group">
+        <input type="password" name="password" placeholder="Enter your password" required>
+      </div>
+      <button type="submit">Login</button>
+      <a href="#" class="forgot-password">Forgot your password?</a>
+    </form>
+  </div>
+</body>
+</html>
